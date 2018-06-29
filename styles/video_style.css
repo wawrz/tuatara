@@ -7,6 +7,10 @@
     vertical-align: middle;
 }
 
+.video-wrapper > video[poster] {
+    object-fit: cover;
+}
+
 .video-wrapper > video.has-media-controls-hidden::-webkit-media-controls {
     display: none;
 }
