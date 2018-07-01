@@ -1,3 +1,9 @@
+@import "footer_form_input_style.scss";
+@import "start_section_animation.scss";
+@import "video_style.scss";
+
+$h3-main-color: #002d5c;
+
 @font-face {
     font-family: "MyriadProRegular";
     src: url("../font/Myriad\ Pro\ Regular.ttf") format("truetype");
@@ -11,9 +17,10 @@ body {
     /* margin-left: 10px; */
 }
 
-h1, h2, h3, h4, h5, p {
-    margin-top: 0px;
-    margin-bottom: 0px;
+h1, h2, h3, h4, h5, p, ul, li
+, .row {
+    margin: 0px;
+    padding: 0px;
 }
 
 .navbar-right {
@@ -64,7 +71,7 @@ header {
     }
 }
 
-[class*="col-"] {
+.col-sm-6 {
     float: none;
     display: table-cell;
     vertical-align: top;
@@ -95,7 +102,7 @@ header {
         margin-top: 22px;
     }
     h2 {
-        color: #002d5c;
+        color: $h3-main-color;
         font-size: 45.2px;
         cursor: pointer;
         
@@ -120,76 +127,6 @@ header {
         margin-left: 10px;
     }
 } 
-
-.animation-start {
-    margin-right: 10px;
-    margin-left: 10px;
-    position:relative;
-    top:-12px;
-    color: red;
-    text-decoration: underline;
-    text-decoration-color: #002d5c;
-    -webkit-text-decoration-color: #002d5c;
-    -webkit-animation-name: animation-start; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
-    animation-name: animation-start;
-    animation-duration: 0.4s;
-    animation-direction: reverse;  
-}
-
-.animation-end {
-    position: relative;
-    -webkit-animation-name: animation-end; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
-    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
-    animation-name: animation-end;
-    animation-duration: 0.4s;
-    animation-direction: reverse; 
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes animation-start {
-    0%   {color:red; text-decoration: none; left:0px; top:-11px;}
-    100% {color:#002d5c; text-decoration: none; left:0px; top:0px;}
-}
-
-/* Standard syntax */
-@keyframes animation-start {
-    0%   {color:red; text-decoration: none; left:0px; top:-11px;}
-    100% {color:#002d5c; text-decoration: none; left:0px; top:0px;}
-}
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes animation-end {
-    0%   { 
-        position:relative; 
-        color:#002d5c; 
-        text-decoration: none;
-        top:0px;
-    }
-    100% {
-        position:relative;
-        color: red; 
-        text-decoration: none; 
-        top:-11px;
-    }
-}
-
-/* Standard syntax */
-@keyframes animation-end {
-    0%   { 
-        color:#002d5c; 
-        position:relative; 
-        text-decoration: none;
-        top:0px;
-    }
-    100% {
-        position:relative;
-        color: red; 
-        text-decoration: none; 
-        top:-11px;
-    }
-}
 
 .section-video {
     background-color: white; 
@@ -221,12 +158,67 @@ header {
     text-align: left;
     h3 {
         font-size: 26.4px;
-        color: #002d5c
+        color: $h3-main-color;
     }
     p {
         width: 86%;
         font-size: 10.8px;
         color: #7d8aa8;
         margin-top: 11px;
+    }
+}
+
+footer {
+    text-align: left;
+    background-color: #f5f4f5;
+    padding-left: 30px;
+    padding-top: 34px;
+    ul {
+        list-style-type: none;
+    }
+    h3 {
+        font-size: 15.4px;
+        margin-left: 15px;
+        margin-bottom: 15px;
+        color: $h3-main-color;
+    }
+    p, ul, li, .label, label, input {
+        font-size: 9px;
+        color: #b6b5b6;
+    }
+    .footer-right-part, .footer-left-part {
+        padding-top: 30px;
+    }
+    .footer-right-part {
+        h3 {
+            margin: 0px;
+        }
+        .link-element {
+            float: right;
+            margin-top: 20px;
+            margin-bottom: 23px;
+        }
+    }
+}
+
+.link-element {
+    display: flex;
+    height: 32px;
+    width: 45px;
+    cursor: pointer;
+    .text-link {
+    vertical-align: middle;
+        font-size: 9px;
+        color: #002d5c;
+        margin-top: auto;
+        margin-bottom: auto;
+        text-transform: uppercase;
+    }
+    .link-img {
+        flex: 1;
+        background-image: url("../images/arrow.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: auto 100%;
     }
 }
