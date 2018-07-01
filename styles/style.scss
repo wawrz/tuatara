@@ -97,6 +97,8 @@ header {
     h2 {
         color: #002d5c;
         font-size: 45.2px;
+        cursor: pointer;
+        
     }
     h3, h4 {
         color: #d91223;
@@ -113,7 +115,81 @@ header {
         font-size: 18px;
         margin-top: 0px;
     }
+    span {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
 } 
+
+.animation-start {
+    margin-right: 10px;
+    margin-left: 10px;
+    position:relative;
+    top:-12px;
+    color: red;
+    text-decoration: underline;
+    text-decoration-color: #002d5c;
+    -webkit-text-decoration-color: #002d5c;
+    -webkit-animation-name: animation-start; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+    animation-name: animation-start;
+    animation-duration: 0.4s;
+    animation-direction: reverse;  
+}
+
+.animation-end {
+    position: relative;
+    -webkit-animation-name: animation-end; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 0.4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-direction: reverse; /* Safari 4.0 - 8.0 */
+    animation-name: animation-end;
+    animation-duration: 0.4s;
+    animation-direction: reverse; 
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation-start {
+    0%   {color:red; text-decoration: none; left:0px; top:-11px;}
+    100% {color:#002d5c; text-decoration: none; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes animation-start {
+    0%   {color:red; text-decoration: none; left:0px; top:-11px;}
+    100% {color:#002d5c; text-decoration: none; left:0px; top:0px;}
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes animation-end {
+    0%   { 
+        position:relative; 
+        color:#002d5c; 
+        text-decoration: none;
+        top:0px;
+    }
+    100% {
+        position:relative;
+        color: red; 
+        text-decoration: none; 
+        top:-11px;
+    }
+}
+
+/* Standard syntax */
+@keyframes animation-end {
+    0%   { 
+        color:#002d5c; 
+        position:relative; 
+        text-decoration: none;
+        top:0px;
+    }
+    100% {
+        position:relative;
+        color: red; 
+        text-decoration: none; 
+        top:-11px;
+    }
+}
 
 .section-video {
     background-color: white; 

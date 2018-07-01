@@ -29,7 +29,32 @@
             <div class="header-container">
                 <h4>Suspendisse - imperdiet felis</h4>
                 <h1>Duis eget metus at tellus</h1>
-                <div></div>
+                <div class="container">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner" style="text-align:center;">
+                            <div class="item active">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
+                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                            </div>
+                            <div class="item">
+                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut 
+                                    aliquip ex ea commodo consequat.Lorem ipsum dolor sit amet, consectetur adipiscing 
+                                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left">xxx</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
                 <button>START</button>
                 <div class="scroll-down "> 
                     <p>SCROLL DOWN</p>
@@ -40,12 +65,34 @@
     </div>
     <div class="row">
         <section class="col-sm-6 section-start">
-            <h2>S T A R T</h1>
+            <h2><span>S</span> <span>T</span> <span>A</span> <span>R</span> <span>T</span></h1>
             <h3>SUSPENDISSE IACULIS</h3>
             <h4>PHASELLUS FINIBUS PHARETRA</h4>
             <p>Sed elit eros, tempor nec ante molestie, convallis facilisis massa. Aenean et lorem ipsum. 
                 Quisque aliquet porta mauris, vel finihus felis mattis maximus</p>
         </section>
+
+        <script>
+            
+            $('.section-start h2 span').click(function() {
+                var hasClicked = $(this).hasClass('animation-start');
+                $(this).removeClass('animation-end');
+                if(hasClicked) {
+                    $(this).addClass('animation-end');
+                    $(this).removeClass('animation-start');
+                } else {
+                    var spans = $('.section-start h2 span');
+                    for (var i = 0; i < spans.length; i++) {
+                        if (spans[i].classList.contains('animation-start')) {
+                            spans[i].classList.add('animation-end');
+                            spans[i].classList.remove('animation-start');
+                        }
+                    }
+                    $(this).addClass('animation-start');
+                }
+            });
+        </script>
+
         <section class="col-sm-6 section-video"> 
             <div class="video-wrapper">
                 <video src="movie.mp4" poster="images/video_poster.png"></video>
