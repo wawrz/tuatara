@@ -9,6 +9,8 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script src="js/video.js"></script>
+<script src="js/start_animation.js"></script>
+<script src="js/form_post_request.js"></script>
 </head>
 <body>
     <nav class="navbar navbar-default" style="margin-bottom:0px;border: none; background-color: white;">
@@ -72,27 +74,6 @@
                 Quisque aliquet porta mauris, vel finihus felis mattis maximus</p>
         </section>
 
-        <script>
-            
-            $('.section-start h2 span').click(function() {
-                var hasClicked = $(this).hasClass('animation-start');
-                $(this).removeClass('animation-end');
-                if(hasClicked) {
-                    $(this).addClass('animation-end');
-                    $(this).removeClass('animation-start');
-                } else {
-                    var spans = $('.section-start h2 span');
-                    for (var i = 0; i < spans.length; i++) {
-                        if (spans[i].classList.contains('animation-start')) {
-                            spans[i].classList.add('animation-end');
-                            spans[i].classList.remove('animation-start');
-                        }
-                    }
-                    $(this).addClass('animation-start');
-                }
-            });
-        </script>
-
         <section class="col-sm-6 section-video"> 
             <div class="video-wrapper">
                 <video src="movie.mp4" poster="images/video_poster.png"></video>
@@ -145,7 +126,7 @@
                     <div class="col-xs-6 col-sm-3 footer-right-part">
                         <h3>Can we help you?</h3>
                         <label for="inp" class="inp">
-                            <input type="text" id="inp" placeholder="&nbsp;">
+                            <input type="text" id="inp" name="inp" placeholder="&nbsp;">
                             <span class="label">your e-mail</span>
                             <span class="border"></span>
                         </label>

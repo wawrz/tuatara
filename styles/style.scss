@@ -194,9 +194,9 @@ footer {
             margin: 0px;
         }
         .link-element {
-            float: right;
             margin-top: 20px;
             margin-bottom: 23px;
+            margin-left: auto;
         }
     }
 }
@@ -207,7 +207,7 @@ footer {
     width: 45px;
     cursor: pointer;
     .text-link {
-    vertical-align: middle;
+        vertical-align: middle;
         font-size: 9px;
         color: #002d5c;
         margin-top: auto;

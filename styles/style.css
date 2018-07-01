@@ -308,9 +308,9 @@ footer {
   footer .footer-right-part h3 {
     margin: 0px; }
   footer .footer-right-part .link-element {
-    float: right;
     margin-top: 20px;
-    margin-bottom: 23px; }
+    margin-bottom: 23px;
+    margin-left: auto; }
 
 .link-element {
   display: flex;
