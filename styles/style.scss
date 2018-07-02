@@ -4,6 +4,7 @@
 
 $h3-main-color: #002d5c;
 $p-main-color: #b6b5b6;
+$button-text-main-color: #7423b8;
 
 @font-face {
     font-family: "MyriadProRegular";
@@ -63,16 +64,52 @@ h1, h2, h3, h4, h5, p, ul, li
     -moz-border-radius: 6;
     border-radius: 6px;
     font-family: MyriadProRegular;
-    color: #7423b8;
+    color: $button-text-main-color;
     font-size: 20px;
     background: #ffffff;
     padding: 2px 42px 0px 42px;
-    margin-top: 20px;
-    margin-bottom: 25px;
     text-decoration: none;
     &:hover {
         background: #f0f0f0;
         text-decoration: none;
+    }
+}
+
+nav {
+    .navbar-left {
+        img {
+            height: 34px;
+            padding-top: 6px;
+            padding-left: 23px;
+        }
+    }
+    .navbar-right {
+        margin-left: 0px;
+    }
+    .nav {
+        .btn-background {
+            background-color:#35124b;
+            height: 50px;
+            a {
+                color: $button-text-main-color;
+                font-size: 18px;
+                &:hover {
+                    background: #f0f0f0;
+                    text-decoration: none;
+                }
+                &:focus {
+                    background: #ffffff;
+                }
+                span {
+                    color: $h3-main-color;
+                    padding: 5px 5px 5px 5px;
+                }
+            }
+        }
+        .btn {  
+            padding: 3px 10px 0px 10px;
+            margin: 11px 9px 9px 9px;
+        }
     }
 }
 
@@ -130,6 +167,8 @@ header {
             }
         }
         .btn {
+            margin-top: 20px;
+            margin-bottom: 25px;
         }
         .scroll-down {
             margin-top: 25px;

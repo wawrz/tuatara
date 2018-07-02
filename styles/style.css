@@ -209,12 +209,34 @@ h1, h2, h3, h4, h5, p, ul, li
   font-size: 20px;
   background: #ffffff;
   padding: 2px 42px 0px 42px;
-  margin-top: 20px;
-  margin-bottom: 25px;
   text-decoration: none; }
   .btn:hover {
     background: #f0f0f0;
     text-decoration: none; }
+
+nav .navbar-left img {
+  height: 34px;
+  padding-top: 6px;
+  padding-left: 23px; }
+nav .navbar-right {
+  margin-left: 0px; }
+nav .nav .btn-background {
+  background-color: #35124b;
+  height: 50px; }
+  nav .nav .btn-background a {
+    color: #7423b8;
+    font-size: 18px; }
+    nav .nav .btn-background a:hover {
+      background: #f0f0f0;
+      text-decoration: none; }
+    nav .nav .btn-background a:focus {
+      background: #ffffff; }
+    nav .nav .btn-background a span {
+      color: #002d5c;
+      padding: 5px 5px 5px 5px; }
+nav .nav .btn {
+  padding: 3px 10px 0px 10px;
+  margin: 11px 9px 9px 9px; }
 
 header {
   text-align: center;
@@ -259,6 +281,9 @@ header {
           background-image: none; }
           header .header-container .container .carousel .carousel-control .glyphicon {
             margin-top: 15px; }
+    header .header-container .btn {
+      margin-top: 20px;
+      margin-bottom: 25px; }
     header .header-container .scroll-down {
       margin-top: 25px;
       font-size: 8px; }
