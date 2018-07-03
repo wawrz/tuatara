@@ -10,19 +10,19 @@ $button-text-main-color: #7423b8;
     font-family: "MyriadProRegular";
     src: url("../font/Myriad\ Pro\ Regular.ttf") format("truetype");
 }
-p.customfont { 
-    font-family: "MyriadProRegular", Verdana, Tahoma;
-}
-
-body {
-    font-family: "MyriadProRegular", Verdana, Tahoma;
-    /* margin-left: 10px; */
-}
 
 h1, h2, h3, h4, h5, p, ul, li
 , .row {
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    font-family: "MyriadProRegular", Verdana, Tahoma;
+}
+
+p.customfont { 
+    font-family: "MyriadProRegular", Verdana, Tahoma;
 }
 
 .navbar-right {
@@ -40,8 +40,9 @@ h1, h2, h3, h4, h5, p, ul, li
     position: absolute;
     left: 0px;
     top: 0px;
-    z-index: -1;
+    opacity: .1;
 }
+
 .figure-background-1 {
     background-color: #efd4eb;
     -webkit-clip-path: polygon(95% 0, 5% 0, 50% 100%);
@@ -76,6 +77,7 @@ h1, h2, h3, h4, h5, p, ul, li
 }
 
 nav {
+    z-index: 1;
     .navbar-left {
         img {
             height: 34px;
@@ -118,15 +120,17 @@ header {
     background-image: url("../images/header_background.png"); 
     background-position: center;
     background-size: cover;
-    min-height: 550px;
     color: #ffffff;
     text-transform: uppercase;
-    opacity: 0.9;
+    z-index: 1;
     .header-container {
+        position: relative;
+        width:100%;
+        z-index: 2;
         width:61%;
         margin-left: auto;
         margin-right: auto;
-        padding: 85px 0px 60px 0px;
+        padding: 60px 0px 68px 0px;
         @media (max-width: 768px) {
             width: 85%;
         }
@@ -393,3 +397,5 @@ footer {
         padding-top: 5px;
     }
 }
+
+*:focus {outline:none}

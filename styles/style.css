@@ -158,17 +158,16 @@ footer .inp {
 @font-face {
   font-family: "MyriadProRegular";
   src: url("../font/Myriad Pro Regular.ttf") format("truetype"); }
-p.customfont {
-  font-family: "MyriadProRegular", Verdana, Tahoma; }
-
-body {
-  font-family: "MyriadProRegular", Verdana, Tahoma;
-  /* margin-left: 10px; */ }
-
 h1, h2, h3, h4, h5, p, ul, li
 , .row {
   margin: 0px;
   padding: 0px; }
+
+body {
+  font-family: "MyriadProRegular", Verdana, Tahoma; }
+
+p.customfont {
+  font-family: "MyriadProRegular", Verdana, Tahoma; }
 
 .navbar-right {
   margin-right: 0px; }
@@ -183,7 +182,7 @@ h1, h2, h3, h4, h5, p, ul, li
   position: absolute;
   left: 0px;
   top: 0px;
-  z-index: -1; }
+  opacity: .1; }
 
 .figure-background-1 {
   background-color: #efd4eb;
@@ -214,44 +213,48 @@ h1, h2, h3, h4, h5, p, ul, li
     background: #f0f0f0;
     text-decoration: none; }
 
-nav .navbar-left img {
-  height: 34px;
-  padding-top: 6px;
-  padding-left: 23px; }
-nav .navbar-right {
-  margin-left: 0px; }
-nav .nav .btn-background {
-  background-color: #35124b;
-  height: 50px; }
-  nav .nav .btn-background a {
-    color: #7423b8;
-    font-size: 18px; }
-    nav .nav .btn-background a:hover {
-      background: #f0f0f0;
-      text-decoration: none; }
-    nav .nav .btn-background a:focus {
-      background: #ffffff; }
-    nav .nav .btn-background a span {
-      color: #002d5c;
-      padding: 5px 5px 5px 5px; }
-nav .nav .btn {
-  padding: 3px 10px 0px 10px;
-  margin: 11px 9px 9px 9px; }
+nav {
+  z-index: 1; }
+  nav .navbar-left img {
+    height: 34px;
+    padding-top: 6px;
+    padding-left: 23px; }
+  nav .navbar-right {
+    margin-left: 0px; }
+  nav .nav .btn-background {
+    background-color: #35124b;
+    height: 50px; }
+    nav .nav .btn-background a {
+      color: #7423b8;
+      font-size: 18px; }
+      nav .nav .btn-background a:hover {
+        background: #f0f0f0;
+        text-decoration: none; }
+      nav .nav .btn-background a:focus {
+        background: #ffffff; }
+      nav .nav .btn-background a span {
+        color: #002d5c;
+        padding: 5px 5px 5px 5px; }
+  nav .nav .btn {
+    padding: 3px 10px 0px 10px;
+    margin: 11px 9px 9px 9px; }
 
 header {
   text-align: center;
   background-image: url("../images/header_background.png");
   background-position: center;
   background-size: cover;
-  min-height: 550px;
   color: #ffffff;
   text-transform: uppercase;
-  opacity: 0.9; }
+  z-index: 1; }
   header .header-container {
+    position: relative;
+    width: 100%;
+    z-index: 2;
     width: 61%;
     margin-left: auto;
     margin-right: auto;
-    padding: 85px 0px 60px 0px; }
+    padding: 60px 0px 68px 0px; }
     @media (max-width: 768px) {
       header .header-container {
         width: 85%; } }
@@ -463,5 +466,8 @@ footer {
   color: #b6b5b6;
   font-size: 7px;
   padding-top: 5px; }
+
+*:focus {
+  outline: none; }
 
 /*# sourceMappingURL=style.css.map */
